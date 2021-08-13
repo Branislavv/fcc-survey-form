@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/style.css" type="text/css">
+        <meta charset="UTF-8">
+        <title> Survey form </title>
+    </head>
+
+    <body>
+        <h1 id="title">
+            Naslov
+        </h1>
+        <p id="description">
+            Deskripcija obicna
+        </p>
+
+        <form id=survey-form>
+            <label id="name-label" for="name">Name</label>            <!-- Unos imena -->
+            <input 
+                id="name"
+                type="text"
+                placeholder="Enter your name"
+                required
+            />
+
+            <!--------------------------------->
+
+            <label id="email-label" for="email">Email</label>          <!-- Unos mejla, posle dodaj proveru da li je ispravilna adresa -->
+            <input
+                id="email"
+                type="email"
+                placeholder="Enter your name"
+                required
+            />
+            
+            <!--------------------------------->
+            
+            <label id="number-label" for="age">Age</label>                <!-- Unos godina, trebalo bi da prihvata samo brojeve -->
+            <input
+                id="number"
+                type="number"
+                placeholder="Enter your age"
+                required
+                min="14"
+                max="99"
+            />
+
+            <!--------------------------------->
+
+            <label id="role-label" for="dropdown"> Dropdown</label>     <!-- Spustajuci meni sa odabir vise opcija -->
+            <select id="dropdown" name="role" required> 
+                <option value="prvo"> Prvo</option>
+                <option value="drugo"> Drugo</option>
+                <option value="trece"> Trece</option>
+            </select>
+
+            <!--------------------------------->
+
+            <fieldset id="radio-form">                                      <!-- Fieldset koji sluzi za one radio dugmice-->
+                <p> pitanje obicno</p>
+                <label>
+                    <input
+                        name="radio-butt" 
+                        type="radio"
+                        value="prva-opcija"
+                        checked
+                    >Prva opcija
+                </label>
+
+                <label>
+                    <input
+                        name="radio-butt" 
+                        type="radio"
+                        value="druga-opcija"
+                    >Druga opcija
+                </label>
+
+                <label>
+                    <input
+                        name="radio-butt" 
+                        type="radio"
+                        value="treca-opcija"
+                    >Treca opcija
+                </label>
+            </fieldset>
+
+            <!--------------------------------->
+
+            <fieldset id="checkbox-form">                                   <!-- Fieldset koji sluzi za one kutijice -->
+                <p>Izaberi sve sta te zanima</p>
+                <label>
+                    <input
+                        name="box-odabir"
+                        type="checkbox"
+                        value="11kutija"
+                    >11Kutija
+                </label>
+
+                <label>
+                    <input
+                        name="box-odabir"
+                        type="checkbox"
+                        value="22kutija"
+                    >22Kutija
+                </label>
+
+                <label>
+                    <input
+                        name="box-odabir"
+                        type="checkbox"
+                        value="33kutija"
+                    >33Kutija
+                </label>
+            </fieldset>
+
+            <!--------------------------------->
+
+            <section>
+                <p>Imate vremena za gubljenje? Napisite nesto</p>       <!-- Komentari -->
+                <textarea
+                    id="komentar"
+                    name="komentar"
+                    placeholder="Unesite komentar ovde..."
+                ></textarea>
+            </section>
+
+            <section>
+                <button
+                    type="submit" id="submit"> Submit
+                </button>
+            </section>
+
+        </form>
+    </body>
+    
+</html>
